@@ -58,17 +58,20 @@ setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\Exe
     vector2b <- c(11:20)
     print(paste("2b =", vector2b))
 
-# 2c) We can also use the seq() function to create more complex vectors, create a vector from 1 to 100 going in steps of 5. (so: 1, 6, 11, …)
+# 2c) We can also use the seq() function to create more complex vectors, 
+# create a vector from 1 to 100 going in steps of 5. (so: 1, 6, 11, …)
 
     vector2c <- seq(from = 1, to = 100, by = 5)
     print(paste("2c =", vector2c))
 
-# 2d) Use the LETTERS constant and the seq() function to create a vector that stores all the ‘even’ letters (gerade Buchstaben: B, D, F, etc)
+# 2d) Use the LETTERS constant and the seq() function to create a vector 
+# that stores all the ‘even’ letters (gerade Buchstaben: B, D, F, etc)
 
     vector2d <- LETTERS[seq(from = 2, to = 26 , by = 2)]
     print(paste("2d =", vector2d))
 
-# 2e) what is the type of vector2a, either use the class() function or ask explicitly using the is.numeric() , is.character() or the is.logical() functions
+# 2e) what is the type of vector2a, either use the class() function or ask 
+# explicitly using the is.numeric() , is.character() or the is.logical() functions
 
     vectorA_Class <- class(vector2a)
     print(paste("2e =", vectorA_Class))
@@ -86,6 +89,64 @@ setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\Exe
 
 # 2h) Extra, square root the sum of vector 2a
 
-    sumVector2a <- sum(vector2a)
-    sqrtSumVector2a <- sqrt(sumVector2a)
-    print(paste( "2h =", sqrtSumVector2a))
+    sum_vector2a <- sum(vector2a)
+    sqrt_sum_vector2a <- sqrt(sum_vector2a)
+    print(paste( "2h =", sqrt_sum_vector2a))
+
+
+
+
+#     Matrices
+
+
+# Store the result each time in a variable: matrix3a, matrix3b, etc
+
+
+# 3a) We can use the matrix() function to create a matrix, create a 10x10 matrix that holds the numbers 1 to 100.
+
+    
+    matrix_10x10 <- matrix(1:100, nrow = 10, ncol = 10)
+    matrix3a <- matrix_10x10
+
+    print(paste("3a ="))
+    print(matrix_10x10)
+    
+    
+# 3b) If you look at the help file of the matrix() function, you see it has a parameter byrow do the same
+# thing as in exercise 3a, but now set the byrow parameter to TRUE, how is this matrix different from
+# the one in exercise 3a ?
+
+    matrix_10x10byRow <- matrix(1:100, nrow = 10, ncol = 10, byrow = TRUE)
+    matrix3b <- matrix_10x10byRow
+
+    print(paste("3b ="))
+    print(matrix_10x10byRow)
+
+# 3c) Select the 5th column from matrix3a, and select the 5th row from matrix3b
+
+    matrix3a_5th_column <- matrix3a[ ,5]
+    matrix3b_5th_row <- matrix3b[5,]
+    print(paste("3c ="))
+
+    print(paste(matrix3a_5th_column))
+    print(paste(matrix3b_5th_row))
+
+# 3d) How can we translate matrix3a into matrix3b ?
+
+    print(paste("3d ="))
+    transposed3a_matrix <- t(matrix3a)
+    transposed3a_matrix == matrix3b
+    print(paste(transposed3a_matrix == matrix3b))
+
+# 3e) Add column names to matrix3a, using the LETTERS constant
+
+    print(paste("3e ="))
+    colnames(matrix3a) <- paste0("Column", LETTERS[1:ncol(matrix3a)])
+    print(matrix3a)
+  
+
+# 3f) Look up help for paste() and add your own rownames to matrix3a, in the structure: “measurement N”, where N is the row number
+
+    print(paste("3f ="))
+    rownames(matrix3a) <- paste("Measurement", (1:10))
+    print(matrix3a)
