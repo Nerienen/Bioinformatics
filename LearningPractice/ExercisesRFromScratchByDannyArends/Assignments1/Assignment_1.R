@@ -150,3 +150,9 @@ setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\Exe
     print(paste("3f ="))
     rownames(matrix3a) <- paste("Measurement", (1:10))
     print(matrix3a)
+
+
+    
+    
+    
+  
