@@ -31,9 +31,23 @@ print(unknown1a)
 
 # 1b) Use an if statement and use the cat() or print() function to print out either: lower or higher if
 # the variable is smaller then 0.5 or bigger than 0.5
+
+print(paste("#2 1b ="))
+
+if(unknown1a < 0.5){
+    (print("lower"))
+}
+if(unknown1a > 0.5){
+    (print("higher"))
+}
+
 # 1c) Generate a uniform value between -10 and 30, round() it to 0 digits behind the comma, and
 # using an if statement check if the value you generated is between 0 and 10 (inclusive), if the
 # variable is not in this range throw a stop error.
+
+univalue1c < round()
+print(paste("#2 1c ="))
+
 # 2a) Using a for loop and sum up all the numbers from 1 to 1000 (inclusive), you can check if your
 # answer is correct by comparing the result to the result of sum(1:1000)
 # 2b) Do the same thing as in assignment 2a, but now use a while loop
