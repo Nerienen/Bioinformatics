@@ -6,7 +6,7 @@
 
 
 # Instruct R to go to the working directory
-setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\ExercisesRFromScratchByDannyArends\\Assignments")
+# setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\ExercisesRFromScratchByDannyArends\\Assignments")
 
 
     
@@ -69,7 +69,6 @@ if(unifValue1c >= 0 && unifValue1c <= 10)
 # answer is correct by comparing the result to the result of sum(1:1000)
 
 print(paste("#2 2a ="))
-
 one_to_1000_summingFunction <- function() {
   
   
@@ -95,15 +94,46 @@ one_to_1000_summingFunction <- function() {
 one_to_1000_summingFunction()
 
 
-
-
 # 2b) Do the same thing as in assignment 2a, but now use a while loop
+
+
+print(paste("#2 2b ="))
+
+one_to_1000_summingFunction <- function() {
+  
+    sum_result <- 0
+    i <- 1  # initializing the counter variable
+
+    while (i <= 1000) {  
+        sum_result <- sum_result + i
+        i <- i + 1  # counter increment
+    }
+    
+    # computed sum
+    if(sum_result == sum(1:1000)) {
+        print("Answer correct.")
+    } else {
+        print("Answer incorrect.")
+    }
+    
+  
+    return(sum_result)
+}
+
+# Use the function!!
+one_to_1000_summingFunction()
+
 # 3) Create a for loop that does the following a 100 times:
 # * Generate a random number between 0 and 100 and store it in a variable
 # * Using a if/else if/else statement check if the variable is lower/higher or equal to 42
 # * Using the cat() function print one of these three statements, (replace X by the random number
 # generated), make sure you add a newline to the cat statement:
 # “X is lower than 42”, “X is higher then 42” or “42 is the answer to life the universe and everything”
+
+
+
+
+
 # 4) Use a while or a for loop and the cat() function to print out a triangle of #, having 12 lines,
 # each line should have one more hashtage then the previous line:
 # #
