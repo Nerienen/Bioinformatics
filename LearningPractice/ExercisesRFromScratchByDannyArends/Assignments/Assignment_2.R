@@ -2,11 +2,11 @@
 #
 # copyright (c) 2024 - Yevgeniy Gugala Fomin
 # written by: Yevgeniy Gugala Fomin
-# last modified 1 Aug, 2024
-# first written 1 Aug, 2024
+# last modified 19 Aug, 2024
+
 
 # Instruct R to go to the working directory
-setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\ExercisesRFromScratchByDannyArends\\Assignments1")
+setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\ExercisesRFromScratchByDannyArends\\Assignments")
 
 
     
@@ -14,10 +14,16 @@ setwd("C:\\Users\\user\\Documents\\GitHub\\Bioinformatics\\LearningPractice\\Exe
     ######2#######
     ##############
 
+
+
 #     Assignments to Lecture 2 – More Introduction into R
 # Danny Arends
 
+
+
 # Control structures
+
+
 
 
 # 1a) Generate a random uniform value (between 0 and 1) using the runif() function and store
@@ -45,11 +51,52 @@ if(unknown1a > 0.5){
 # using an if statement check if the value you generated is between 0 and 10 (inclusive), if the
 # variable is not in this range throw a stop error.
 
-univalue1c < round()
 print(paste("#2 1c ="))
 
-# 2a) Using a for loop and sum up all the numbers from 1 to 1000 (inclusive), you can check if your
+
+unifValue1c <- round(runif(1, min = -10, max = 30), digits = 0)
+
+print(unifValue1c)
+
+if(unifValue1c >= 0 && unifValue1c <= 10)
+{
+    print("Value is between 0 and 10")
+}else{
+    print("Value is NOT between 0 and 10")
+}
+    
+# 2a) Using a for loop, sum up all the numbers from 1 to 1000 (inclusive), you can check if your
 # answer is correct by comparing the result to the result of sum(1:1000)
+
+print(paste("#2 2a ="))
+
+one_to_1000_summingFunction <- function() {
+  
+  
+    sum_result <- 0
+
+   
+    for(i in 1:1000) {
+        sum_result <- sum_result + i
+    }
+    
+    # computed sum
+    if(sum_result == sum(1:1000)) {
+        print("Answer correct.")
+    } else {
+        print("Answer incorrect.")
+    }
+    
+  
+    return(sum_result)
+}
+
+# Use the function!!
+one_to_1000_summingFunction()
+
+
+
+
 # 2b) Do the same thing as in assignment 2a, but now use a while loop
 # 3) Create a for loop that does the following a 100 times:
 # * Generate a random number between 0 and 100 and store it in a variable
