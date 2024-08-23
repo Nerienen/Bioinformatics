@@ -123,14 +123,29 @@ one_to_1000_summingFunction <- function() {
 # Use the function!!
 one_to_1000_summingFunction()
 
-# 3) Create a for loop that does the following a 100 times:
+# 3) Create a for loop that does the following 10 times:
 # * Generate a random number between 0 and 100 and store it in a variable
 # * Using a if/else if/else statement check if the variable is lower/higher or equal to 42
 # * Using the cat() function print one of these three statements, (replace X by the random number
 # generated), make sure you add a newline to the cat statement:
 # “X is lower than 42”, “X is higher then 42” or “42 is the answer to life the universe and everything”
 
+print(paste("#2 3 ="))
 
+#repeat 10 times
+for (i in 1:10) {
+  # random number between 0 - 100
+  random_number <- sample(0:100, 1)
+  print(random_number)
+  
+  if (random_number < 42) {
+    cat(random_number, "is lower than 42\n")
+  } else if (random_number > 42) {
+    cat(random_number, "is higher than 42\n")
+  } else {
+    cat("42 is the answer to life the universe and everything\n")
+  }
+}
 
 
 
