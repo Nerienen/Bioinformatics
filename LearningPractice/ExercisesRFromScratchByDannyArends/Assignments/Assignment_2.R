@@ -148,7 +148,6 @@ for (i in 1:10) {
 }
 
 
-
 # 4) Use a while or a for loop and the cat() function to print out a triangle of #, having 12 lines,
 # each line should have one more hashtage then the previous line:
 # #
@@ -161,6 +160,12 @@ for (i in 1:10) {
 # whitespace (called trailing white space) before the end of the line.
 # Tip: Use \n for going to the next line
 # Escaping
+
+for (i in 1:12) {
+  cat(rep("#", i), "\n", sep="")
+}
+
+
 # 5) Use character escaping and print the following two sentences literally to a file (test.txt), using
 # the cat() function:
 # I say: "Escaping stuff is 'great', but \ and / might be a nuisance."
