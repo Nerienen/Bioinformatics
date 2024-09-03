@@ -166,6 +166,7 @@ for (i in 1:12) {
 }
 
 
+
 # 5) Use character escaping and print the following two sentences literally to a file (test.txt), using
 # the cat() function:
 # I say: "Escaping stuff is 'great', but \ and / might be a nuisance."
