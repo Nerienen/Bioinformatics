@@ -98,7 +98,7 @@ print ("predicting trained line")
 x_i = 1200.0
 predicted_price = linear_model(x_i).numpy()
 print(f"Predicted price for house with {x_i} sqft: ${predicted_price:.0f} dollars")
-
+print("training complete")
 # A tuple is a fundamental data structure in programming, representing an ordered, immutable collection of items
 
 
