@@ -70,7 +70,7 @@ def visualize_mendel(k, m, n):
     return total_prob
 
 # --- Example Usage ---
-k, m, n = 17, 16, 15
+k, m, n = 2, 2, 2
 print("Computed probability:", mendel_prob(k, m, n))
 visualize_mendel(k, m, n)
 
