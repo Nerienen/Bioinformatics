@@ -19,7 +19,13 @@ hamming_distance = 0
 
 # zip(s, t) pairs up corresponding characters:
 
+#hamming distance calculation: measuring how many characters differ between two strings (or lists) of equal length.
+
+#zip() pairs up elements from s and t position by position
+
+#On each pass, a is one element from s and b is the corresponding element from t.
 for a, b in zip(s, t):
+    #Checks if the two corresponding elements differ.
     if a != b:
         hamming_distance += 1
 
